@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/48e7b06ab1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #hell {
+            position: fixed;
+            bottom: 0;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: #383838;
+            height: 5rem;
+        }
+
+        .hvr i:hover {
+            color: darkred !important;
+        }
+
+        .hvr:hover .hdr a {
+            display: block !important;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: black;">
+    <audio id="myAudio" src="../Music/shrivalli.mp3" preload="auto">
+    </audio>
+
+    <audio id="kala2" src="../Music/kalaavathi.mp3"></audio>
+
+    <a class="helo" style="color: aqua; width: 2rem;" id="audio-play-button">
+        <i id="fa-el" onclick="togglePlay(this)" class='far fa-play-circle' )></i>
+    </a>
+
+    <!-- <a style="color: aqua; width: 2rem;" id="audioBtn">
+        <i id="fa-el2" onclick="kalavati(this)" class="far fa-play-circle"></i>
+    </a> -->
+
+    <a id="clickBtn" style="color: aqua;" id="rdm">
+        <i id="elm" class="far fa-play-circle"></i>
+    </a>
+
+    <audio src="../Music/mayakirriye.mp3" id="mpThree"></audio>
+
+    <a id="clkbtn" style="color: aqua; width: 2rem;">
+        <i id="abc" class="far fa-play-circle"></i>
+    </a>
+
+
+
+
+
+
+
+    <audio id="mpfour" src="../file_example_MP3_700KB.mp3" controls></audio>
+
+
+    <button id="ben">Click Me</button>
+    <button id="bin">Click Me</button>
+
+
+
+
+
+    <div id="hell">
+        <a href="" style="color: aqua; width: 2rem; padding-left: 1%;">
+            <i class="far fa-play-circle"></i>
+        </a>
+        <a href="" style="color: aqua; width: 2rem;">
+            <i class="far fa-play-circle"></i>
+        </a>
+        <a href="" style="color: aqua; width: 2rem; padding-right: 1%;">
+            <i style="color: aqua; font-size: 2rem; width: 2rem; display: inline;" class="far fa-play-circle"></i>
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+    <div>
+        <input min="0" max="100" type="range" onchange="nnm()" name="" id="rng">
+
+        <i id="lkj" style="color: aqua; display: none; width: 2rem;" class="fas fa-volume"></i>
+
+
+        <div style="color: brown; background-color: #ddd;">
+            <h1>Audio Volume Range :
+                <span id="nmb"></span>
+            </h1>
+            <h1>Input Button Range :
+                <span id="asd"></span>
+            </h1>
+        </div>
+    </div>
+
+
+    <div>
+        <div class="hvr" style="width: fit-content; cursor: pointer; color: aqua; font-size: 2rem;">
+            <i class="far fa-play-circle"></i>
+            <div class="hdr">
+                <a href="" style="color: aqua; display: none; width: 2rem;">
+                    <i class="far fa-play-circle"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <h2 id="kkk" style="color: aqua;">0.0</h2>
+
+
+    <input type="range" onchange="jjk()" min="0" max="100" id="rng2">
+
+
+    <i style="color: aqua;" class="fab fa-youtube"></i>
+    <i style="color: aqua;" class="fas fa-paper-plane"></i>
+    <i id="vbn" style="color: aqua;" class="fas fa-volume-up"></i>
+    <i style="color: aqua;" class="fas fa-volume-mute"></i>
+
+    <div>
+        <i id="lll" style="color: aqua;" class="bi bi-volume-up-fill"></i>
+    </div>
+
+
+
+
+
+    <script>
+
+        let bsd = document.getElementById("bin");
+        console.log(bsd);
+
+        let bsd1 = document.getElementById("ben")
+
+
+
+
+
+
+
+
+        function jjk() {
+
+
+
+            // if (document.getElementById("rng2").valueAsNumber <= 0) {
+            //     if (document.getElementById("vbn").classList.contains("fa-volume-up") == true) {
+            //         document.getElementById("vbn").classList.toggle("fa-volume-up");
+            //         document.getElementById("vbn").classList.toggle("fa-volume-mute");
+            //     } else {
+            //         document.getElementById("vbn").classList.toggle("fa-volume-up");
+            //         document.getElementById("vbn").classList.toggle("fa-volume-mute");
+            //     }
+            // }
+
+
+
+
+
+
+            if(document.getElementById("rng2").valueAsNumber == 0) {
+                if(document.getElementById("vbn").classList.contains("fa-volume-up") == true) {
+                    document.getElementById("vbn").classList.replace("fa-volume-up", "fa-volume-mute")
+                }
+            } else {
+                document.getElementById("vbn").classList.replace("fa-volume-mute", "fa-volume-up")
+            }
+
+
+
+
+
+
+            if(document.getElementById("rng2").valueAsNumber == 0) {
+                if(document.getElementById("lll").classList.contains("bi-volume-up-fill") == true) {
+                    document.getElementById("lll").classList.replace("bi-volume-up-fill", "bi-volume-mute-fill")
+                }
+            } else {
+                document.getElementById("lll").classList.replace("bi-volume-mute-fill", "bi-volume-up-fill")
+            }
+
+
+
+
+            // if(document.getElementById("rng2").valueAsNumber == 0 && document.getElementById("vbn").classList.contains("fa-volume-up") == true) {
+            //     document.getElementById("vbn").classList.toggle("fa-volume-up");
+            //     document.getElementById("vbn").classList.toggle("fa-volume-mute");
+            // } else {
+            //     document.getElementById("vbn").classList.toggle("fa-volume-up");
+            //     document.getElementById("vbn").classList.toggle("fa-volume-mute");
+            // }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        function nnm() {
+            document.getElementById("mpfour").volume = document.getElementById("rng").valueAsNumber / 100;
+            if (document.getElementById("rng").valueAsNumber == 0) {
+                document.getElementById("mpfour").volume = 0;
+
+                document.getElementById("lkj").classList.replace("bi-volume-up-fill", "bi-volume-mute-fill")
+                // document.getElementById("lkj").classList.toggle("bi-volume-mute-fill")
+            }
+        }
+
+        bin.addEventListener("click", function () {
+            document.getElementById("lkj").classList.remove("bi-volume-up-fill");
+            document.getElementById("lkj").classList.add("bi-volume-mute-fill");
+        })
+
+
+
+
+        // for (let i = 0; i < bsd; i++) {
+        //     bsd[i].addEventListener("click", () => {
+        //         dis.style.display = "flex";
+        //     })
+        // }
+
+        bsd1.addEventListener("click", () => {
+            document.getElementById("hell").style.display = "flex"
+        })
+
+        bsd.addEventListener("click", () => {
+            document.getElementById("hell").style.display = "flex";
+        })
+
+
+
+
+
+
+
+
+        let myAudio = document.getElementById("myAudio");
+        let audioEl = document.getElementById('audio-play-button');
+        let el = document.getElementById("elm");
+        let abc = document.getElementById("abc")
+
+
+
+
+
+
+        function togglePlay(e) {
+            if (myAudio.paused) {
+                myAudio.play();
+                mpThree.pause();
+                mpfour.pause();
+                e.classList.toggle('fa-pause-circle');
+                e.classList.toggle('fa-play-circle');
+            } else {
+                myAudio.pause();
+                e.classList.toggle('fa-pause-circle');
+                e.classList.toggle('fa-play-circle');
+            }
+        };
+
+
+
+
+
+
+        var get = document.getElementById("clickBtn");
+        console.log(get)
+        get.addEventListener("click", function () {
+            if (el.classList.contains("fa-play-circle") == true) {
+                mpThree.play();
+                myAudio.pause();
+                mpfour.pause();
+
+                el.classList.toggle("fa-pause-circle");
+                el.classList.toggle("fa-play-circle");
+            } else {
+                mpThree.pause()
+                el.classList.toggle("fa-pause-circle");
+                el.classList.toggle("fa-play-circle");
+            }
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var zi = document.getElementById("clkbtn");
+        zi.addEventListener("click", function () {
+            if (abc.classList.contains("fa-play-circle") == true) {
+                mpfour.play();
+                myAudio.pause();
+                mpThree.pause();
+
+                for (let b = parseFloat(0.0); b == parseFloat(document.getElementById("mpfour").currentTime); b++) {
+                    document.getElementById("kkk").innerHTML += b;
+                }
+
+                document.getElementById("lkj").style.display = "block";
+                document.getElementById("mpfour").onended = () => {
+                    abc.classList.toggle("fa-pause-circle");
+                    abc.classList.toggle("fa-play-circle");
+                }
+                // setInterval(jd, 2000)
+
+                // // if (abc.classList.contains("fa-play-circle") == true) {
+                // //     clearInterval(jd);
+                // // }
+
+                abc.classList.toggle("fa-pause-circle");
+                abc.classList.toggle("fa-play-circle");
+            } else {
+                mpfour.pause();
+                document.getElementById("lkj").style.display = "none";
+                abc.classList.toggle("fa-play-circle");
+                abc.classList.toggle("fa-pause-circle");
+            }
+        })
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
